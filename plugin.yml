@@ -1,0 +1,7 @@
+version: 1.0
+name: MMORPGPLUGIN
+main: com.nowords.mmorpgplugin.Main
+author: nowords
+api-version: 1.15
+description: Host an MMORPG server
+commands:
