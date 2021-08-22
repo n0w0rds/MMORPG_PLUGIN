@@ -10,7 +10,6 @@ import net.minecraft.server.v1_16_R3.World;
 public class NPC {
 	
 	private String NPC_NAME;
-	//test
 	private Location NPC_LOC;
 	private ArmorStand NPC_ENTIY;
 	private int NPC_TEXTURE_ID;
