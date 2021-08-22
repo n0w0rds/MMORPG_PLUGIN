@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/micma/OneDrive/Bureau/MMO_SERVER/PLUGINS_FILES/SPIGOT_VERSIONS/spigot_1.16.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/micma/Documents/GitHub/MMORPG_PLUGIN/spigot_1.16.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
