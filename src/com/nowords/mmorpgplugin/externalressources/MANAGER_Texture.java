@@ -15,4 +15,10 @@ public class MANAGER_Texture {
 		TEXTURES_LIST.add(new Texture("test", NPC_STATE.IDLE, 0));
 		TEXTURES_LIST.add(new Texture("test", NPC_STATE.WAVING, 1));
 	}
+	
+	
+	//---------------------------------------
+	//GET
+	//---------------------------------------
+	public ArrayList<Texture> getTextureList(){return TEXTURES_LIST;}
 }

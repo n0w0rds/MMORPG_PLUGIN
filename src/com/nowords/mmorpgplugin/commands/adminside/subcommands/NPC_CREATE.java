@@ -2,10 +2,19 @@ package com.nowords.mmorpgplugin.commands.adminside.subcommands;
 
 import java.util.ArrayList;
 
+import org.bukkit.entity.Player;
+
+import com.nowords.mmorpgplugin.Main;
 import com.nowords.mmorpgplugin.commands.abstractclass.ABST_SUBCOMMAND;
 
 public class NPC_CREATE extends ABST_SUBCOMMAND {
-
+	
+	Main main;
+	
+	public NPC_CREATE(Main main) {
+		this.main = main;
+	}
+	
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
@@ -31,7 +40,7 @@ public class NPC_CREATE extends ABST_SUBCOMMAND {
 	}
 
 	@Override
-	public void perform() {
+	public void perform(Player player, String[] args ) {
 		// TODO Auto-generated method stub
 		
 	}

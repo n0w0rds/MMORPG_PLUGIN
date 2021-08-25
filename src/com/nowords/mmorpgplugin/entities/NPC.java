@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import com.nowords.mmorpgplugin.Main;
 import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
-
+import com.nowords.mmorpgplugin.externalressources.Texture;
 
 import net.minecraft.server.v1_16_R3.World;
 
@@ -27,12 +27,12 @@ public class NPC {
 	private HashMap<NPC_STATE, Integer> NPC_TEXTURES = new HashMap<>();
 	
 	public NPC(String name,String type,Location loc, Player player, Main main) {
-		this.main = main;
-		
+		this.main = main;		
 		this.NPC_TYPE = type;
 		this.NPC_NAME = name;
 		this.NPC_LOC = loc;
 		
+		loadTexture(this.NPC_TYPE);
 		create(player);
 	}
 	
@@ -43,8 +43,14 @@ public class NPC {
 	
 	//LOAD TEXTURE FROM TEXTURE LIST
 	private void loadTexture(String type) {
-		
+		//Get textures with valid type
+		for(Texture index: main.TEXTURE_LIST.getTextureList()) {
+			if(index.getType().equalsIgnoreCase(this.NPC_TYPE)) {
+				this.NPC_TEXTURES.put(index.getState(), index.getCustomData());
+			}
+		}
 	}
+	
 	
 	
 	

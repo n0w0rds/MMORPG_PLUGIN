@@ -13,4 +13,12 @@ public class Texture {
 		this.STATE = state;
 		this.CUSTOM_DATA = CUSTOMDATA;
 	}
+	
+	
+	//---------------------------------------
+	//GET
+	//---------------------------------------
+	public NPC_STATE getState() {return STATE;}
+	public int getCustomData() {return CUSTOM_DATA;}
+	public String getType() {return TYPE;}
 }
