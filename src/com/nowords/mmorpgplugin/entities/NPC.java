@@ -54,7 +54,6 @@ public class NPC {
 	
 	
 	
-	
 	//SPAWN THE ENTITY
 	private void spawn(Player player, NPC_STATE state) {
 		//Create Entity
@@ -69,6 +68,7 @@ public class NPC {
 		//Entity Properties
 		this.NPC_ENTIY.getEquipment().setHelmet(texture);
 		this.NPC_ENTIY.setInvisible(true);
+		this.NPC_ENTIY.setInvulnerable(true);
 		this.NPC_ENTIY.setCustomName(NPC_NAME);
 		this.NPC_ENTIY.setCustomNameVisible(true);
 	}

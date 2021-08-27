@@ -3,6 +3,7 @@ package com.nowords.mmorpgplugin.commands;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,7 +22,6 @@ public class ADMIN_COMMAND_MANAGER implements CommandExecutor,TabCompleter{
 	ArrayList<ABST_COMMAND> COMMANDS_LIST = new ArrayList<>();
 	public ADMIN_COMMAND_MANAGER(Main main) {
 		this.main = main;
-		
 		//Load Commands
 		COMMANDS_LIST.add(new COMMAND_NPC(main));
 	}
@@ -90,9 +90,11 @@ public class ADMIN_COMMAND_MANAGER implements CommandExecutor,TabCompleter{
 		}else if(args.length >= 2) {
 			//Get the subcommand
 			for(ABST_COMMAND cmd: this.COMMANDS_LIST) {
-				if(cmd.getName().equalsIgnoreCase(command.getName())) {
+				if(cmd.getName().equals(command.getName())) {
 					for(ABST_SUBCOMMAND sub: cmd.getArguments()) {
-						sub.getArgs(args.length);
+						if(args[0].equals(sub.getName())) {
+							ARGUMENTS = sub.getArgs(args.length - 1);
+						}
 					}
 				}
 				

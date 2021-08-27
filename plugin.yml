@@ -5,3 +5,4 @@ author: nowords
 api-version: 1.15
 description: Host an MMORPG server
 commands:
+    npc:
