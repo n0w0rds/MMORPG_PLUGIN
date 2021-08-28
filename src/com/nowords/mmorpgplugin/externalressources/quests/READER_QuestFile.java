@@ -4,8 +4,12 @@ import java.io.File;
 import java.io.IOException;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+
+import com.nowords.mmorpgplugin.jobs.ENUM_Jobs;
 
 public class READER_QuestFile {
 	
@@ -60,19 +64,57 @@ public class READER_QuestFile {
 	
 	
 	//Read the NAME
-	
+	public String getName() {return this.QuestFile.getString("name");}
 	
 	//Is the quest linear
+	public boolean get_isLinear() {return Boolean.parseBoolean((this.QuestFile.getString("is_linear")));}
+	
+	
+	//Get Prerequisites Job
+	public ENUM_Jobs getPrerequisiteJob() {return ENUM_Jobs.valueOf(this.QuestFile.getString("prerequisite.job"));}
 	
 	
 	//Check Prerequisites
+	public boolean check_prerequisites(int LEVEL) {
+		boolean IS_VALID = false;
+		int READ_LEVEL = Integer.parseInt(this.QuestFile.getString("prerequisite.level"));
+		
+		//If there is no prerequisite or the player's level is high enough 
+		if(this.QuestFile.getString("prerequisite.job").equals("null") || READ_LEVEL <= LEVEL) {
+			IS_VALID = true;
+		}
+			
+		return IS_VALID;
+	}
 	
 	
 	//Get the ammount of steps
+	public int getAmmountStep() {return this.QuestFile.getConfigurationSection("steps").getKeys(false).size();}
 	
 	
-	//Get a specific step's infos
+	//Get a specific step's task
+	public String getStepTask(int STEP_INDEX) {return this.QuestFile.getString("steps." +STEP_INDEX+ ".task");}
+		
 	
+	//Get a specific step's location
+	public Location getStepLocation(int STEP_INDEX, Player player) {
+		
+		int x = Integer.parseInt(this.QuestFile.getString("steps." +STEP_INDEX+ ".x"));
+		int y = Integer.parseInt(this.QuestFile.getString("steps." +STEP_INDEX+ ".y"));
+		int z = Integer.parseInt(this.QuestFile.getString("steps." +STEP_INDEX+ ".z"));
+		
+		return new Location(player.getWorld(), x, y, z);
+	}
+		
+	//Get a specific step's Action type
+	
+
+
+	//Get a specific step's Action target
+		
+		
+	//Get a specific step's item to give
+		
 	
 	//Get the REWARDS
 	
