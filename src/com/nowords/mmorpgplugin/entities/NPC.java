@@ -12,7 +12,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import com.nowords.mmorpgplugin.Main;
 import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
-import com.nowords.mmorpgplugin.externalressources.Texture;
+import com.nowords.mmorpgplugin.externalressources.textures.Texture;
 
 import net.minecraft.server.v1_16_R3.World;
 

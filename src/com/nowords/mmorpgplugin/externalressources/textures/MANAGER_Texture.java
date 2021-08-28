@@ -1,4 +1,4 @@
-package com.nowords.mmorpgplugin.externalressources;
+package com.nowords.mmorpgplugin.externalressources.textures;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,6 @@ public class MANAGER_Texture {
 	Main main;
 	ArrayList<Texture> TEXTURES_LIST = new ArrayList<>();
 	ArrayList<String> TYPE_LIST = new ArrayList<>();
-	
 	public MANAGER_Texture(Main main) {
 		this.main = main;
 		initTextures();
@@ -34,7 +33,7 @@ public class MANAGER_Texture {
 	//---------------------------------------
 	//GET
 	//---------------------------------------
-	public ArrayList<Texture> getTextureList(){return TEXTURES_LIST;}
+	public ArrayList<Texture> getTextureList(){return TEXTURES_LIST;} 
 	
 	public ArrayList<String> getTypes(){return TYPE_LIST;}
 }

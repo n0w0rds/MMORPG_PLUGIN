@@ -1,4 +1,4 @@
-package com.nowords.mmorpgplugin.externalressources;
+package com.nowords.mmorpgplugin.externalressources.textures;
 
 import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
 
