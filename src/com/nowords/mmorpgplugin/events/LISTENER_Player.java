@@ -7,7 +7,7 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 
 import com.nowords.mmorpgplugin.Main;
-import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
+import com.nowords.mmorpgplugin.entities.enums.ENUM_NpcState;
 
 public class LISTENER_Player implements Listener {
 	

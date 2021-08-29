@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 
 import com.nowords.mmorpgplugin.Main;
 import com.nowords.mmorpgplugin.commands.abstractclass.ABST_SUBCOMMAND;
-import com.nowords.mmorpgplugin.entities.NPC;
+import com.nowords.mmorpgplugin.entities.customentity.NPC;
 
 import net.md_5.bungee.api.ChatColor;
 

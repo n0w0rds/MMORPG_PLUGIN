@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.nowords.mmorpgplugin.Main;
-import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
+import com.nowords.mmorpgplugin.entities.enums.ENUM_NpcState;
 
 public class MANAGER_Texture {
 	Main main;
@@ -19,8 +19,8 @@ public class MANAGER_Texture {
 	
 	//Add all the textures to the array
 	private void initTextures() {
-		TEXTURES_LIST.add(new Texture("test", NPC_STATE.IDLE, 0));
-		TEXTURES_LIST.add(new Texture("test", NPC_STATE.WAVING, 1));
+		TEXTURES_LIST.add(new Texture("test", ENUM_NpcState.IDLE, 0));
+		TEXTURES_LIST.add(new Texture("test", ENUM_NpcState.WAVING, 1));
 	}
 	
 	

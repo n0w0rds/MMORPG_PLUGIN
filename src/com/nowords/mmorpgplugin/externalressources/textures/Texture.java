@@ -1,14 +1,14 @@
 package com.nowords.mmorpgplugin.externalressources.textures;
 
-import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
+import com.nowords.mmorpgplugin.entities.enums.ENUM_NpcState;
 
 public class Texture {
 	
-	private NPC_STATE STATE;
+	private ENUM_NpcState STATE;
 	private int CUSTOM_DATA;
 	private String TYPE;
 	
-	public Texture(String type,NPC_STATE state, int CUSTOMDATA) {
+	public Texture(String type,ENUM_NpcState state, int CUSTOMDATA) {
 		this.TYPE = type;
 		this.STATE = state;
 		this.CUSTOM_DATA = CUSTOMDATA;
@@ -18,7 +18,7 @@ public class Texture {
 	//---------------------------------------
 	//GET
 	//---------------------------------------
-	public NPC_STATE getState() {return STATE;}
+	public ENUM_NpcState getState() {return STATE;}
 	public int getCustomData() {return CUSTOM_DATA;}
 	public String getType() {return TYPE;}
 }

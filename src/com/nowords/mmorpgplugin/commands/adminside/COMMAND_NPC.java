@@ -8,7 +8,7 @@ import com.nowords.mmorpgplugin.Main;
 import com.nowords.mmorpgplugin.commands.abstractclass.ABST_COMMAND;
 import com.nowords.mmorpgplugin.commands.abstractclass.ABST_SUBCOMMAND;
 import com.nowords.mmorpgplugin.commands.adminside.subcommands.NPC_CREATE;
-import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
+
 
 import net.md_5.bungee.api.ChatColor;
 

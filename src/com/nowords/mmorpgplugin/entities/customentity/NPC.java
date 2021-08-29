@@ -1,4 +1,4 @@
-package com.nowords.mmorpgplugin.entities;
+package com.nowords.mmorpgplugin.entities.customentity;
 
 import java.util.HashMap;
 
@@ -11,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.nowords.mmorpgplugin.Main;
-import com.nowords.mmorpgplugin.entities.enums.NPC_STATE;
+import com.nowords.mmorpgplugin.entities.enums.ENUM_NpcState;
 import com.nowords.mmorpgplugin.externalressources.textures.Texture;
 
 import net.minecraft.server.v1_16_R3.World;
@@ -24,7 +24,7 @@ public class NPC {
 	private Location NPC_LOC;
 	private ArmorStand NPC_ENTIY;
 	private String NPC_TYPE;
-	private HashMap<NPC_STATE, Integer> NPC_TEXTURES = new HashMap<>();
+	private HashMap<ENUM_NpcState, Integer> NPC_TEXTURES = new HashMap<>();
 	
 	public NPC(String name,String type,Location loc, Player player, Main main) {
 		this.main = main;		
@@ -55,7 +55,7 @@ public class NPC {
 	
 	
 	//SPAWN THE ENTITY
-	private void spawn(Player player, NPC_STATE state) {
+	private void spawn(Player player, ENUM_NpcState state) {
 		//Create Entity
 		this.NPC_ENTIY = (ArmorStand) player.getWorld().spawnEntity(NPC_LOC, EntityType.ARMOR_STAND);
 		
@@ -77,7 +77,7 @@ public class NPC {
 	
 	//Create the NPC
 	private void create(Player player) {
-		spawn(player, NPC_STATE.IDLE);
+		spawn(player, ENUM_NpcState.IDLE);
 		
 		//Register the NPC
 		this.main.NPC_LIST.put(NPC_NAME, this);
@@ -86,7 +86,7 @@ public class NPC {
 	
 	
 	//Change the state
-	public void stateChanger(NPC_STATE state) {
+	public void stateChanger(ENUM_NpcState state) {
 		//Texture
 		ItemStack texture = new ItemStack(Material.CARVED_PUMPKIN);
 		ItemMeta meta = texture.getItemMeta();

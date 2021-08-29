@@ -1,6 +1,6 @@
 package com.nowords.mmorpgplugin.entities.enums;
 
-public enum NPC_STATE {
+public enum ENUM_NpcState {
 	
 	IDLE, 
 	WAVING 
