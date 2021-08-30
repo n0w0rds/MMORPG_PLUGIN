@@ -7,5 +7,4 @@ public enum ENUM_ActionTypes {
 	BREAK_BLOCK,
 	GET_ITEM,
 	
-	
 }
